@@ -1,2 +1,16 @@
 <app-header></app-header>
 <app-hero></app-hero>
+<h1>Hi, I'm {{ name }} and I'm {{ age }} </h1>
+<button 
+  class="btn btn-primary"
+  [disabled]="!increaseAge"
+  (click)="onIncreaseAge()"
+>
+  Increase age
+</button>
+<p>This is the output: "{{ userData.stringOutput }}"</p>
+<input type="text" class="form-control" [(ngModel)]="userData.stringOutput">
+<p *ngIf="showAge; else dontShowAge">A minha idade é {{ age }} </p>
+<ng-template #dontShowAge>
+  <p>Não posso mostrar a idade</p>
+</ng-template>
