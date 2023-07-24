@@ -6,10 +6,11 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #0E0D0C;
+  background-color: #0e0d0c;
   /* font-family: 'Montserrat Alternates', sans-serif; */
   position: fixed;
   width: 100dvw;
+  z-index: 1;
 }
 
 .nav-container {

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css', '../hero/hero.component.css']
 })
 export class HeaderComponent {
-
+  options: Array<string> = ['Home', 'About', 'Portfolio', 'Contact']
 }

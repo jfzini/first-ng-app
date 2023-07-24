@@ -1,5 +1,6 @@
 <app-header></app-header>
 <app-hero></app-hero>
+<app-about></app-about>
 <h1>Hi, I'm {{ name }} and I'm {{ age }} </h1>
 <button 
   class="btn btn-primary"
@@ -8,9 +9,26 @@
 >
   Increase age
 </button>
+<button
+  class="btn btn-primary"
+  (click)="onAddCard()"
+>
+  Add card
+</button>
+<div *ngFor="let card of cards; let i = index" [ngClass]="{over30: i >= 5, under30: i >= 10}">
+  Este é o {{ card.message }}
+</div>
 <p>This is the output: "{{ userData.stringOutput }}"</p>
-<input type="text" class="form-control" [(ngModel)]="userData.stringOutput">
-<p *ngIf="showAge; else dontShowAge">A minha idade é {{ age }} </p>
+<input
+  type="text"
+  [class]="age <= 30 ? 'under30' : 'over30'"
+  [(ngModel)]="userData.stringOutput">
+<p
+  *ngIf="showAge; else dontShowAge"
+  [ngStyle]="{backgroundColor: getColor()}"
+>
+  A minha idade é {{ age }}
+</p>
 <ng-template #dontShowAge>
-  <p>Não posso mostrar a idade</p>
+  <p>Ainda não aumentou a idade</p>
 </ng-template>
