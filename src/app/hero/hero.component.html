@@ -17,13 +17,7 @@
         Hi, I&apos;m Zini! Front-end developer ready to work with:
       </p>
       <div class="stacks">
-        <img src='../../assets/img/stacks/react.png' alt="react logo" class="stack__img" />
-        <img src='../../assets/img/stacks/jest.png' alt="jest logo" class="stack__img" />
-        <img src='../../assets/img/stacks/rtl.png' alt="rtl logo" class="stack__img" />
-        <img src='../../assets/img/stacks/javascript.png' alt="js logo" class="stack__img" />
-        <img src='../../assets/img/stacks/css.png' alt="css logo" class="stack__img" />
-        <img src='../../assets/img/stacks/html.png' alt="html logo" class="stack__img" />
-        <img src='../../assets/img/stacks/git.png' alt="git logo" class="stack__img" />
+        <img *ngFor="let stack of stacks" [src]="stack.url" [alt]="stack.name" class="stack__img" />
       </div>
     </div>
   </div>
