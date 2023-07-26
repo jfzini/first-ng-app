@@ -4,7 +4,7 @@ import projectsData from './projects.model';
 @Component({
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.css']
+  styleUrls: ['./projects-list.component.css', '../app.component.css']
 })
 export class ProjectsListComponent {
 

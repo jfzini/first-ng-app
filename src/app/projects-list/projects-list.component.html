@@ -1,7 +1,7 @@
-<section id="projects" className="section__container section__container--odd">
+<section id="projects" class="section__container section__container--odd">
   <h2>{{'\<Projects />'}}</h2>
-  <article className="article__container">
-    <div className="article__content">
+  <article class="article__container">
+    <div class="article__content">
       <p>Here you can find some of the projects that I&apos;ve developed so far.</p>
       <p>Keep in touch to see newer ones as I develop more!</p>
     </div>
@@ -9,27 +9,5 @@
   <app-project
     *ngFor="let project of projectsData"
     [projectData]="project"
-    [projectText]="project.description"
-    [projectName]="project.name"
-    [projectUrl]="project.url"
-    [projectVideo]="project.video"
   ></app-project>
-  <!-- <app-project
-    name="shoppingCart: {"
-    videoSrc="https://www.youtube.com/embed/7ILdnnq-X84"
-    text={ projectsTexts.shoppingCart }
-    projectUrl="https://github.com/jfzini/shopping-cart"
-  ></app-project>
-  <app-project
-    name="solarSystem: {"
-    videoSrc="https://www.youtube.com/embed/4GuyL_BArd8"
-    text={ projectsTexts.solarSystem }
-    projectUrl="https://github.com/jfzini/solar-system"
-  ></app-project>
-  <app-project
-    name="zooFunctions: {"
-    imageSrc={ zooFunctions }
-    text={ projectsTexts.zooFunctions }
-    projectUrl="https://github.com/jfzini/solar-system"
-  ></app-project> -->
 </section>
