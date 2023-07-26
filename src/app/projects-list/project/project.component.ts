@@ -9,9 +9,14 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class ProjectComponent {
   @Input() projectData: {[key: string]: string};
-
+  safeVideoUrl: SafeResourceUrl;
+  
   constructor(private sanitizer: DomSanitizer) {}
 
+  ngOnInit() {
+    this.safeVideoUrl = this.getSafeVideoUrl();
+  }
+  
   getSafeVideoUrl(): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.projectData.video);
   }

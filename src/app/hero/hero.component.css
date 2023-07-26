@@ -1,8 +1,5 @@
 h2 {
-  animation: appear 2s ease-in-out forwards;
-  font-size: 4rem;
-  margin: 80px;
-  text-align: center;
+  font-size: 4rem !important;
 }
 
 .hero {
